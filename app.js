@@ -3,6 +3,9 @@ const express = require('express')
 // 載入mongoose
 const mongoose = require('mongoose')
 
+const exphbs = require('express-handlebars')
+const { engine } = require('express/lib/application')
+
 const app = express()
 const port = 3000
 
@@ -22,8 +25,12 @@ db.once('open', () => {
   console.log('mongodb connected!!')
 })
 
+// 載入exphs樣板引擎並指定附檔名為.hbs
+app.engine('hbs', exphbs({ defaultLayout: 'main', extname: '.hbs' }))
+app.set('view engine', 'hbs')
+
 app.get('/', (req, res) => {
-  res.send('hello world!!')
+  res.render('index')
 })
 
 app.listen(port, () => {
