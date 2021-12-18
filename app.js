@@ -67,6 +67,28 @@ app.get('/todos/:id', (req, res) => {
     .catch(error => console.log(error)) // 錯誤提示訊息
 })
 
+// 設定修改資料頁面
+app.get('/todos/:id/edit', (req, res) => {
+  const id = req.params.id
+  return Todo.findById(id)
+    .lean()
+    .then((todo) => res.render('edit', { todo }))
+    .catch(error => console.log(error))
+})
+
+// 設定修改資料後傳送到資料庫的行為
+app.post('/todos/:id/edit', (req, res) => {
+  const id = req.params.id
+  const name = req.body.name // 將修改的資料取出
+  return Todo.findById(id) // 去資料庫尋找出該筆資料後，再重新覆值並儲存
+    .then(todo => {
+      todo.name = name
+      return todo.save()
+    })
+    .then(() => res.redirect(`/todos/${id}`)) // 完成後返回詳細頁面
+    .catch(error => console.log(error)) // 錯誤提示訊息
+})
+
 app.listen(port, () => {
   console.log('app is running on http://localhost:3000')
 })
