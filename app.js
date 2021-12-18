@@ -89,6 +89,15 @@ app.post('/todos/:id/edit', (req, res) => {
     .catch(error => console.log(error)) // 錯誤提示訊息
 })
 
+// 設定刪除資料的行為
+app.post('/todos/:id/delete', (req, res) => {
+  const id = req.params.id
+  return Todo.findById(id) // 去資料庫尋找該筆資料
+    .then(todo => todo.remove()) // 再將該筆資料刪除
+    .then(() => res.redirect('/')) // 刪除後重新導向回首頁
+    .catch(error => console.log(error)) // 錯誤提示訊息
+})
+
 app.listen(port, () => {
   console.log('app is running on http://localhost:3000')
 })
