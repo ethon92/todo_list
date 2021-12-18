@@ -58,6 +58,15 @@ app.post('/todos', (req, res) => {
     .catch(error => console.log(error))
 })
 
+// 設定顯示詳細資訊頁面
+app.get('/todos/:id', (req, res) => {
+  const id = req.params.id // 將id從url中取出動態參數:id
+  return Todo.findById(id) // 去資料庫中尋找id
+    .lean() // 將資料轉換成JS物件
+    .then((todo) => res.render('detail', { todo })) // 將資料渲染至detail頁面
+    .catch(error => console.log(error)) // 錯誤提示訊息
+})
+
 app.listen(port, () => {
   console.log('app is running on http://localhost:3000')
 })
