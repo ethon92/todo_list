@@ -14,7 +14,7 @@ Express 基礎驗收
 
 1. 開啟終端機(terminal)並複製(clone)此專案至本機電腦
 ```
-git link here
+https://github.com/ethon92/todo_list.git
 ```
 2. 在終端機(terminal)中進入此專案資料夾
 ```
