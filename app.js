@@ -9,6 +9,9 @@ const exphbs = require('express-handlebars')
 // 載入 body-parser
 const bodyParser = require('body-parser')
 
+// 載入 method-override
+const methodOverride = require('method-override')
+
 // 載入Todo model
 const Todo = require('./models/todo')
 
@@ -37,6 +40,8 @@ app.set('view engine', 'hbs')
 
 // 用 app.use 規定每一筆請求都需要透過 body-parser 進行前置處理
 app.use(bodyParser.urlencoded({ extended: true }))
+
+app.use(methodOverride('_method'))
 
 app.get('/', (req, res) => {
   Todo.find() // 取出Todo model中所有資料
@@ -78,7 +83,7 @@ app.get('/todos/:id/edit', (req, res) => {
 })
 
 // 設定修改資料後傳送到資料庫的行為
-app.post('/todos/:id/edit', (req, res) => {
+app.put('/todos/:id', (req, res) => {
   const id = req.params.id
   const {name, isDone} = req.body // 利用解構賦值將name/isDone取出
   return Todo.findById(id) // 去資料庫尋找出該筆資料後，再重新覆值並儲存
@@ -92,7 +97,7 @@ app.post('/todos/:id/edit', (req, res) => {
 })
 
 // 設定刪除資料的行為
-app.post('/todos/:id/delete', (req, res) => {
+app.delete('/todos/:id', (req, res) => {
   const id = req.params.id
   return Todo.findById(id) // 去資料庫尋找該筆資料
     .then(todo => todo.remove()) // 再將該筆資料刪除
