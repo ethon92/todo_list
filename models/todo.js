@@ -9,6 +9,12 @@ const todoSchema = new Schema({
   name: {
     type: String, // 資料型別是字串
     required: true // 這是個必填欄位
+  },
+
+  // 新增顯示是否為做完/沒做完
+  isDone: {
+    type: Boolean,
+    default: false
   }
 })
 

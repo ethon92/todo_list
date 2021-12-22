@@ -79,10 +79,11 @@ app.get('/todos/:id/edit', (req, res) => {
 // 設定修改資料後傳送到資料庫的行為
 app.post('/todos/:id/edit', (req, res) => {
   const id = req.params.id
-  const name = req.body.name // 將修改的資料取出
+  const {name, isDone} = req.body // 利用解構賦值將name/isDone取出
   return Todo.findById(id) // 去資料庫尋找出該筆資料後，再重新覆值並儲存
     .then(todo => {
       todo.name = name
+      todo.isDone = isDone === "on" // 當checkbox打勾時回傳值為on
       return todo.save()
     })
     .then(() => res.redirect(`/todos/${id}`)) // 完成後返回詳細頁面
