@@ -1,16 +1,8 @@
-const mongoose = require('mongoose')
 const Todo = require('../todo') // 載入 todo model
+const db = require('../../config/mongoose') // 載入mongoose模組
 
-mongoose.connect('mongodb://localhost/todo_list')
-
-const db = mongoose.connection
-
-db.on('error', () => {
-  console.log('mongodb error!')
-})
 
 db.once('open', () => {
-  console.log('mongodb connected!')
 
   // 利用for迴圈產生種子資料
   for (let i=0; i<10; i++) {
