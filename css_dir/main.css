@@ -184,4 +184,33 @@ body {
   border-top-right-radius: 5px;
 }
 
+.create {
+  position: relative;
+  width: 30vw;
+  border: 1px solid #a7aaaf;
+  border-radius: 5px;
+}
+.create > form {
+  width: 100%;
+}
+.create > form > input[type=text] {
+  -webkit-appearance: none;
+  border-style: none;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  width: 88.5%;
+  padding: 0.2rem;
+}
+.create > form > button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-color: #53a351;
+  color: #fff;
+  border-style: none;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
 /*# sourceMappingURL=main.css.map */
