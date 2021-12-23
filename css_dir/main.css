@@ -154,4 +154,34 @@ body {
   padding: 0.5rem;
 }
 
+.edit {
+  position: relative;
+  width: 30vw;
+}
+.edit > form > .edit__info {
+  border: 1px solid #a7aaaf;
+  border-radius: 5px;
+}
+.edit > form > .edit__info > input[type=text] {
+  -webkit-appearance: none;
+  border-style: none;
+  width: 85%;
+  padding: 0.2rem;
+}
+.edit > form > .edit__info > input[type=checkbox] {
+  background-color: #e9ecef;
+}
+.edit > form > button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #53a351;
+  color: #fff;
+  height: 100%;
+  width: 10%;
+  border-style: none;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
 /*# sourceMappingURL=main.css.map */
