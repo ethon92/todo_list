@@ -46,6 +46,12 @@ a {
   /* 拿掉底線 */
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 3rem auto;
+}
+
 body {
   background-color: whitesmoke;
 }
@@ -54,7 +60,7 @@ body {
   position: relative;
   height: 4rem;
   width: 100%;
-  background-color: #0275d8;
+  background-color: #3c88fd;
   text-align: center;
   line-height: 4rem;
 }
@@ -64,17 +70,47 @@ body {
 }
 .navigator > button {
   position: absolute;
-  right: 1rem;
+  right: 10rem;
   top: 2rem;
   transform: translateY(-50%);
   padding: 8px;
   font-size: 1rem;
-  background-color: #0275d8;
+  background-color: #3c88fd;
   border: 1px solid #fff;
   border-radius: 5px;
+  box-shadow: 2px 2px 3px #a7aaaf;
 }
 .navigator > button > .navigator__create {
   color: #fff;
+}
+
+.main__panel__todo {
+  display: flex;
+  justify-content: space-between;
+  width: 30vw;
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #a7aaaf;
+}
+.main__panel__todo > .main__panel__todo__btn > a {
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+.main__panel__todo > .main__panel__todo__btn :first-child {
+  background-color: #6e757c;
+}
+.main__panel__todo > .main__panel__todo__btn :nth-child(2) {
+  background-color: #53a351;
+}
+.main__panel__todo > .main__panel__todo__btn :last-child {
+  background-color: #cb444a;
+  color: #fff;
+}
+.main__panel__todo > .main__panel__todo__btn :last-child > button {
+  padding: 0.5rem;
+  border-style: none;
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=main.css.map */

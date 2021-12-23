@@ -1,13 +1,17 @@
-<ul>
+<ul class="main__panel">
   {{#each todos}}
-    <li>
-      <input type="checkbox" name="isDone" {{#if this.isDone}} checked {{/if}} disabled>
-      {{ this.name }}
-      <a href="./todos/{{ this._id }}">detail</a>
-      <a href="./todos/{{ this._id }}/edit">edit</a>
-      <form action="./todos/{{ this._id }}?_method=DELETE" method="POST" style="display: inline;">
-        <button type="submit">delete</button>
-      </form>
+    <li class="main__panel__todo">
+      <div class="main__panel__todo__name">
+        <input type="checkbox" name="isDone" {{#if this.isDone}} checked {{/if}} disabled>
+        {{ this.name }}
+      </div>
+      <div class="main__panel__todo__btn">
+        <a href="./todos/{{ this._id }}">detail</a>
+        <a href="./todos/{{ this._id }}/edit">edit</a>
+        <form action="./todos/{{ this._id }}?_method=DELETE" method="POST" style="display: inline;">
+          <button type="submit">delete</button>
+        </form>
+      </div>
     </li>
   {{/each}}
 </ul>
