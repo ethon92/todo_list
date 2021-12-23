@@ -113,4 +113,45 @@ body {
   border-radius: 5px;
 }
 
+.detail {
+  display: flex;
+  justify-content: space-between;
+  width: 30vw;
+}
+.detail > .detail__info {
+  border: 1px solid #a7aaaf;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: #e9ecef;
+  width: 100%;
+}
+.detail .detail__info__name, .detail .detail__info__checkbox {
+  display: inline-block;
+  padding: 0.5rem;
+}
+.detail .detail__info__checkbox {
+  border-right: 1px solid #a7aaaf;
+}
+.detail .detail__btn {
+  display: flex;
+  align-items: center;
+}
+.detail .detail__btn > a {
+  color: #fff;
+  background-color: #53a351;
+  padding: 0.5rem;
+  height: 100%;
+}
+.detail .detail__btn :last-child {
+  color: #fff;
+  background-color: #cb444a;
+  border-style: none;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 100%;
+}
+.detail .detail__btn :last-child > button {
+  padding: 0.5rem;
+}
+
 /*# sourceMappingURL=main.css.map */
