@@ -1,6 +1,6 @@
 # Todo List
 
-Express 基礎驗收
+建立擁有基本CRUD功能的Todo List
 
 ## Features - 功能列表
 
