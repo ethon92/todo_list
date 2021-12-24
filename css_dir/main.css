@@ -56,6 +56,10 @@ body {
   background-color: whitesmoke;
 }
 
+.create > form > button, .create > form > input[type=text], .edit > form > button, .edit > form > .edit__info > input[type=text], .detail .detail__btn :last-child, .detail, .main__panel__todo > .main__panel__todo__btn :last-child > button, .main__panel__todo {
+  font-size: 1rem;
+}
+
 .navigator {
   position: relative;
   height: 4rem;
@@ -83,6 +87,9 @@ body {
 .navigator > button > .navigator__create {
   color: #fff;
 }
+.navigator > button:hover {
+  box-shadow: 2px 2px 3px #4a4a4a;
+}
 
 .main__panel__todo {
   display: flex;
@@ -100,17 +107,28 @@ body {
 .main__panel__todo > .main__panel__todo__btn :first-child {
   background-color: #6e757c;
 }
+.main__panel__todo > .main__panel__todo__btn :first-child:hover {
+  box-shadow: 2px 2px 3px #4a4a4a;
+}
 .main__panel__todo > .main__panel__todo__btn :nth-child(2) {
   background-color: #53a351;
+}
+.main__panel__todo > .main__panel__todo__btn :nth-child(2):hover {
+  box-shadow: 2px 2px 3px #4a4a4a;
 }
 .main__panel__todo > .main__panel__todo__btn :last-child {
   background-color: #cb444a;
   color: #fff;
+  border-style: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
 }
 .main__panel__todo > .main__panel__todo__btn :last-child > button {
   padding: 0.5rem;
-  border-style: none;
   border-radius: 5px;
+}
+.main__panel__todo > .main__panel__todo__btn :last-child:hover {
+  box-shadow: 2px 2px 3px #4a4a4a;
 }
 
 .detail {
@@ -120,8 +138,7 @@ body {
 }
 .detail > .detail__info {
   border: 1px solid #a7aaaf;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-radius: 5px 0 0 5px;
   background-color: #e9ecef;
   width: 100%;
 }
@@ -142,16 +159,22 @@ body {
   padding: 0.5rem;
   height: 100%;
 }
+.detail .detail__btn > a:hover {
+  box-shadow: 2px 2px 3px #4a4a4a;
+}
 .detail .detail__btn :last-child {
-  color: #fff;
   background-color: #cb444a;
+  color: #fff;
   border-style: none;
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
   height: 100%;
 }
 .detail .detail__btn :last-child > button {
   padding: 0.5rem;
+}
+.detail .detail__btn :last-child:hover {
+  box-shadow: 2px 2px 3px #4a4a4a;
 }
 
 .edit {
@@ -161,56 +184,56 @@ body {
 .edit > form > .edit__info {
   border: 1px solid #a7aaaf;
   border-radius: 5px;
+  background-color: #e4e8f0;
 }
 .edit > form > .edit__info > input[type=text] {
-  -webkit-appearance: none;
-  border-style: none;
-  width: 85%;
-  padding: 0.2rem;
-}
-.edit > form > .edit__info > input[type=checkbox] {
-  background-color: #e9ecef;
+  border: 1px solid #a7aaaf;
+  width: 80%;
+  padding: 0.3rem;
 }
 .edit > form > button {
+  background-color: #53a351;
+  color: #fff;
+  border-style: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
   position: absolute;
   right: 0;
   top: 0;
-  background-color: #53a351;
-  color: #fff;
   height: 100%;
-  width: 10%;
-  border-style: none;
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
+  width: 15%;
+}
+.edit > form > button:hover {
+  box-shadow: 2px 2px 3px #4a4a4a;
 }
 
 .create {
   position: relative;
   width: 30vw;
-  border: 1px solid #a7aaaf;
-  border-radius: 5px;
 }
 .create > form {
   width: 100%;
 }
 .create > form > input[type=text] {
-  -webkit-appearance: none;
-  border-style: none;
-  border-bottom-left-radius: 5px;
-  border-top-left-radius: 5px;
-  width: 88.5%;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid #a7aaaf;
+  width: 85%;
   padding: 0.2rem;
 }
 .create > form > button {
+  background-color: #53a351;
+  color: #fff;
+  border-style: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
   position: absolute;
   top: 0;
   right: 0;
   height: 100%;
-  background-color: #53a351;
-  color: #fff;
-  border-style: none;
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
+  width: 15%;
+}
+.create > form > button:hover {
+  box-shadow: 2px 2px 3px #4a4a4a;
 }
 
 /*# sourceMappingURL=main.css.map */
