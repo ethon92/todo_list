@@ -88,7 +88,7 @@ body {
   color: #fff;
 }
 .navigator > button:hover {
-  box-shadow: 2px 2px 3px #4a4a4a;
+  box-shadow: inset 2px 2px 0 2px #4a4a4a;
 }
 
 .main__panel__todo {
@@ -109,13 +109,13 @@ body {
   background-color: #6e757c;
 }
 .main__panel__todo > .main__panel__todo__btn :first-child:hover {
-  box-shadow: 2px 2px 3px #4a4a4a;
+  box-shadow: inset 2px 2px 0 2px #4a4a4a;
 }
 .main__panel__todo > .main__panel__todo__btn :nth-child(2) {
   background-color: #53a351;
 }
 .main__panel__todo > .main__panel__todo__btn :nth-child(2):hover {
-  box-shadow: 2px 2px 3px #4a4a4a;
+  box-shadow: inset 2px 2px 0 2px #4a4a4a;
 }
 .main__panel__todo > .main__panel__todo__btn :last-child {
   background-color: #cb444a;
@@ -129,7 +129,7 @@ body {
   border-radius: 5px;
 }
 .main__panel__todo > .main__panel__todo__btn :last-child:hover {
-  box-shadow: 2px 2px 3px #4a4a4a;
+  box-shadow: inset 2px 2px 0 2px #4a4a4a;
 }
 
 .detail {
@@ -161,7 +161,7 @@ body {
   height: 100%;
 }
 .detail .detail__btn > a:hover {
-  box-shadow: 2px 2px 3px #4a4a4a;
+  box-shadow: inset 2px 2px 0 2px #4a4a4a;
 }
 .detail .detail__btn :last-child {
   background-color: #cb444a;
@@ -175,7 +175,7 @@ body {
   padding: 0.5rem;
 }
 .detail .detail__btn :last-child:hover {
-  box-shadow: 2px 2px 3px #4a4a4a;
+  box-shadow: inset 2px 2px 0 2px #4a4a4a;
 }
 
 .edit {
@@ -205,7 +205,7 @@ body {
   width: 15%;
 }
 .edit > form > button:hover {
-  box-shadow: 2px 2px 3px #4a4a4a;
+  box-shadow: inset 2px 2px 0 2px #4a4a4a;
 }
 
 .create {
@@ -234,7 +234,7 @@ body {
   width: 15%;
 }
 .create > form > button:hover {
-  box-shadow: 2px 2px 3px #4a4a4a;
+  box-shadow: inset 2px 2px 0 2px #4a4a4a;
 }
 
 /*# sourceMappingURL=main.css.map */
