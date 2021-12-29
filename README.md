@@ -25,11 +25,15 @@ cd todo_list
 npm install // 安裝npm套件
 npm install -g nodemon // 安裝nodemon套件
 ```
-4. 執行app.js啟動伺服器
+4. 載入種子資料(seeder)
+```
+npm run seed
+```
+5. 執行app.js啟動伺服器
 ```
 npm run dev
 ```
-5. 開啟瀏覽器輸入 http://localhost:3000 即可進入Todo List
+6. 開啟瀏覽器輸入 http://localhost:3000 即可進入Todo List
 
 ## Using Tools - 使用工具
 
